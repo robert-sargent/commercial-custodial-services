@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+@layer base {
+  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -13,24 +14,51 @@
     font-weight: normal;
     font-style: normal;
   }
-  
   h1 {
     font-family: "Heebo";
     font-weight: 700;
     font-style: normal;
+    font-size: 3em;
   }
-  
-  h2,
-  h3,
+  h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: "Overpass";
+    font-weight: bold;
+  }
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: "Overpass";
+    font-weight: bold;
+  }
   h4 {
+    display: block;
+    font-size: 1em;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
     font-family: "Overpass";
     font-weight: 300;
     font-style: normal;
   }
-  .container {
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    height: 100vh;
+  h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
   }
   section {
     height: 100vh;
@@ -39,3 +67,9 @@
     align-items: center;
     scroll-snap-align: start;
   }
+}
+.container {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
