@@ -33,138 +33,128 @@
 
     Off-canvas menu for mobile, show/hide based on off-canvas menu state.
   -->
-      <header class="bg-gray-900">
-        <nav
-          class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
-          aria-label="Global"
+  <header class="bg-gray-900">
+    <nav
+      class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      aria-label="Global"
+    >
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Commercial Custodial Services</span>
+          <img
+            class="h-8 w-auto"
+            src="https://tailwindui.com/img/logos/mark.svg?color=green&shade=500"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button
+          type="button"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-green-500"
+          onclick=toggleNav()
         >
-          <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Commercial Custodial Services</span>
-              <img
-                class="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="flex lg:hidden">
-            <button
-              type="button"
-              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
-              onclick="toggleNav()"
-            >
-              <span class="sr-only">Open main menu</span>
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="hidden lg:flex lg:gap-x-12">
-            <a
-              href="./index.html"
-              class="text-sm font-semibold leading-6 text-white"
-              >Home</a
-            >
-            <a
-              href="./about.html"
-              class="text-sm font-semibold leading-6 text-white"
-              >About Us</a
-            >
-            <a
-              href="./communityImpact.html"
-              class="text-sm font-semibold leading-6 text-white"
-              >Community Impact</a
-            >
-            <a href="#" class="text-sm font-semibold leading-6 text-indigo-300"
-              >Let's Connect</a
-            >
-          </div>
-        </nav>
-        <!-- Mobile menu, show/hide based on menu open state. -->
-        <div
-          id="navMenu"
-          class="lg:hidden transition-all ease-in-out"
-          role="dialog"
-          aria-modal="true"
-          hidden
-        >
-          <!-- Background backdrop, show/hide based on slide-over state. -->
-          <div class="fixed inset-0 z-10"></div>
-          <div
-            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
           >
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Commercial Custodial Services</span>
-                <img
-                  class="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                  alt=""
-                />
-              </a>
-              <button
-                type="button"
-                class="-m-2.5 rounded-md p-2.5 text-gray-400"
-                onclick="toggleNav()"
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="./index.html" class="text-sm font-semibold leading-6 text-green-500"
+          >Home</a
+        >
+        <a href="./about.html" class="text-sm font-semibold leading-6 text-green-500"
+          >About Us</a
+        >
+        <a href="" class="text-sm font-semibold leading-6 text-green-500"
+          >Community Impact</a
+        >
+        <a href="./letsConnect.html" class="text-sm font-semibold leading-6 text-green-300"
+          >Let's Connect</a
+        >
+      </div>
+    
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div id="navMenu" class="lg:hidden transition-all ease-in-out" role="dialog" aria-modal="true" hidden >
+      <!-- Background backdrop, show/hide based on slide-over state. -->
+      <div class="fixed inset-0 z-10" ></div>
+      <div
+        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
+      >
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Commercial Custodial Services</span>
+            <img
+              class="h-8 w-auto"
+              src="https://tailwindui.com/img/logos/mark.svg?color=green&shade=500"
+              alt=""
+            />
+          </a>
+          <button
+            type="button"
+            class="-m-2.5 rounded-md p-2.5 text-gray-400"
+            onclick=toggleNav()
+          >
+            <span class="sr-only">Close menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/25">
+            <div class="space-y-2 py-6">
+              <a
+                href="./index.html"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-green-500 hover:bg-gray-800"
+                >Home</a
               >
-                <span class="sr-only">Close menu</span>
-                <svg
-                  class="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
+              <a
+                href="./about.html"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-green-500 hover:bg-gray-800"
+                >About US</a
+              >
+              <a
+                href="./communityImpact.html"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-green-500 hover:bg-gray-800"
+                >Community Impact</a
+              >
+              <a
+                href="#"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-green-300 hover:bg-gray-800"
+                >Let's Connect</a
+              >
             </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/25">
-                <div class="space-y-2 py-6">
-                  <a
-                    href="./index.html"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                    >Home</a
-                  >
-                  <a
-                    href="./about.html"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                    >About US</a
-                  >
-                  <a
-                    href="./communityImpact.html"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                    >Community Impact</a
-                  >
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-indigo-300 hover:bg-gray-800"
-                    >Let's Connect</a
-                  >
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
       <main class="snap-mandatory snap-y">
        <!--
   This example requires some changes to your config:
@@ -386,7 +376,7 @@
 
       </main>
 
-      <footer aria-labelledby="footer-heading" class="bg-gray-50">
+      <footer aria-labelledby="footer-heading" class="bg-gray-900">
         <h2 id="footer-heading" class="sr-only">Footer</h2>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="border-t border-gray-200 py-20">
@@ -398,7 +388,7 @@
                 class="col-span-1 md:col-span-2 lg:col-start-1 lg:row-start-1"
               >
                 <img
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                  src="https://tailwindui.com/img/logos/mark.svg?color=green&shade=500"
                   alt=""
                   class="h-8 w-auto"
                 />
@@ -413,151 +403,39 @@
                 >
                   <div>
                     <h3 class="text-sm font-medium text-gray-900">Products</h3>
-                    <ul role="list" class="mt-6 space-y-6">
+                    <ul role="list" class="mb-6 space-y-6">
                       <li class="text-sm">
-                        <a href="#" class="text-gray-500 hover:text-gray-600"
-                          >Bags</a
+                        <a href="./index.html" class="text-green-500 hover:text-green-600"
+                          >Home</a
                         >
                       </li>
                       <li class="text-sm">
-                        <a href="#" class="text-gray-500 hover:text-gray-600"
-                          >Tees</a
+                        <a href="./about.html" class="text-green-500 hover:text-green-600"
+                          >About us</a
                         >
                       </li>
                       <li class="text-sm">
-                        <a href="#" class="text-gray-500 hover:text-gray-600"
-                          >Objects</a
+                        <a href="./communityImpact.html" class="text-green-500 hover:text-green-600"
+                          >Community Impact</a
                         >
                       </li>
                       <li class="text-sm">
-                        <a href="#" class="text-gray-500 hover:text-gray-600"
-                          >Home Goods</a
-                        >
-                      </li>
-                      <li class="text-sm">
-                        <a href="#" class="text-gray-500 hover:text-gray-600"
-                          >Accessories</a
+                        <a href="#" class="text-green-300 hover:text-green-600"
+                          >Let's Connect</a
                         >
                       </li>
                     </ul>
                   </div>
-                  <div>
-                    <h3 class="text-sm font-medium text-gray-900">Company</h3>
-                    <ul role="list" class="mt-6 space-y-6">
-                      <li class="text-sm">
-                        <a href="#" class="text-gray-500 hover:text-gray-600"
-                          >Who we are</a
-                        >
-                      </li>
-                      <li class="text-sm">
-                        <a href="#" class="text-gray-500 hover:text-gray-600"
-                          >Sustainability</a
-                        >
-                      </li>
-                      <li class="text-sm">
-                        <a href="#" class="text-gray-500 hover:text-gray-600"
-                          >Press</a
-                        >
-                      </li>
-                      <li class="text-sm">
-                        <a href="#" class="text-gray-500 hover:text-gray-600"
-                          >Careers</a
-                        >
-                      </li>
-                      <li class="text-sm">
-                        <a href="#" class="text-gray-500 hover:text-gray-600"
-                          >Terms &amp; Conditions</a
-                        >
-                      </li>
-                      <li class="text-sm">
-                        <a href="#" class="text-gray-500 hover:text-gray-600"
-                          >Privacy</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div>
-                  <h3 class="text-sm font-medium text-gray-900">
-                    Customer Service
-                  </h3>
-                  <ul role="list" class="mt-6 space-y-6">
-                    <li class="text-sm">
-                      <a href="#" class="text-gray-500 hover:text-gray-600"
-                        >Contact</a
-                      >
-                    </li>
-                    <li class="text-sm">
-                      <a href="#" class="text-gray-500 hover:text-gray-600"
-                        >Shipping</a
-                      >
-                    </li>
-                    <li class="text-sm">
-                      <a href="#" class="text-gray-500 hover:text-gray-600"
-                        >Returns</a
-                      >
-                    </li>
-                    <li class="text-sm">
-                      <a href="#" class="text-gray-500 hover:text-gray-600"
-                        >Warranty</a
-                      >
-                    </li>
-                    <li class="text-sm">
-                      <a href="#" class="text-gray-500 hover:text-gray-600"
-                        >Secure Payments</a
-                      >
-                    </li>
-                    <li class="text-sm">
-                      <a href="#" class="text-gray-500 hover:text-gray-600"
-                        >FAQ</a
-                      >
-                    </li>
-                    <li class="text-sm">
-                      <a href="#" class="text-gray-500 hover:text-gray-600"
-                        >Find a store</a
-                      >
-                    </li>
-                  </ul>
-                </div>
+
               </div>
 
-              <!-- Newsletter section -->
-              <div
-                class="mt-12 md:col-span-8 md:col-start-3 md:row-start-2 md:mt-0 lg:col-span-4 lg:col-start-9 lg:row-start-1"
-              >
-                <h3 class="text-sm font-medium text-gray-900">
-                  Sign up for our newsletter
-                </h3>
-                <p class="mt-6 text-sm text-gray-500">
-                  The latest deals and savings, sent to your inbox weekly.
-                </p>
-                <form class="mt-2 flex sm:max-w-md">
-                  <label for="email-address" class="sr-only"
-                    >Email address</label
-                  >
-                  <input
-                    id="email-address"
-                    type="text"
-                    autocomplete="email"
-                    required
-                    class="w-full min-w-0 appearance-none rounded-md border border-gray-300 bg-white px-4 py-2 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                  />
-                  <div class="ml-4 flex-shrink-0">
-                    <button
-                      type="submit"
-                      class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    >
-                      Sign up
-                    </button>
-                  </div>
-                </form>
-              </div>
+   
             </div>
           </div>
 
-          <div class="border-t border-gray-100 py-10 text-center">
-            <p class="text-sm text-gray-500">
-              &copy; 2021 Your Company, Inc. All rights reserved.
+          <div class="border-t border-green-900 py-10 text-center">
+            <p class="text-sm text-green-600">
+              &copy; 2023 Commercial Custodial Services, LLC. All rights reserved.
             </p>
           </div>
         </div>
