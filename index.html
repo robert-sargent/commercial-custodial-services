@@ -39,12 +39,12 @@
           aria-label="Global"
         >
           <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
+            <a href="./index.html" class="-m-1.5 p-1.5">
               <span class="sr-only">Commercial Custodial Services</span>
               <img
                 class="h-8 w-auto"
                 src="./assets/images/ccsLogo.png"
-                alt=""
+                alt="CCS company logo"
               />
             </a>
           </div>
@@ -52,7 +52,7 @@
             <button
               type="button"
               class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-green-500"
-              onclick=toggleNav()
+              onclick="toggleNav()"
             >
               <span class="sr-only">Open main menu</span>
               <svg
@@ -75,27 +75,38 @@
             <a href="#" class="text-sm font-semibold leading-6 text-green-300"
               >Home</a
             >
-            <a href="./about.html" class="text-sm font-semibold leading-6 text-green-500"
+            <a
+              href="./about.html"
+              class="text-sm font-semibold leading-6 text-green-500"
               >About Us</a
             >
-            <a href="./communityImpact.html" class="text-sm font-semibold leading-6 text-green-500"
+            <a
+              href="./communityImpact.html"
+              class="text-sm font-semibold leading-6 text-green-500"
               >Community Impact</a
             >
-            <a href="./letsConnect.html" class="text-sm font-semibold leading-6 text-green-500"
+            <a
+              href="./letsConnect.html"
+              class="text-sm font-semibold leading-6 text-green-500"
               >Let's Connect</a
             >
           </div>
-        
         </nav>
         <!-- Mobile menu, show/hide based on menu open state. -->
-        <div id="navMenu" class="lg:hidden transition-all ease-in-out" role="dialog" aria-modal="true" hidden >
+        <div
+          id="navMenu"
+          class="lg:hidden transition-all ease-in-out"
+          role="dialog"
+          aria-modal="true"
+          hidden
+        >
           <!-- Background backdrop, show/hide based on slide-over state. -->
-          <div class="fixed inset-0 z-10" ></div>
+          <div class="fixed inset-0 z-10"></div>
           <div
             class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
           >
             <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
+              <a href="./index.html" class="-m-1.5 p-1.5">
                 <span class="sr-only">Commercial Custodial Services</span>
                 <img
                   class="h-8 w-auto"
@@ -106,7 +117,7 @@
               <button
                 type="button"
                 class="-m-2.5 rounded-md p-2.5 text-gray-400"
-                onclick=toggleNav()
+                onclick="toggleNav()"
               >
                 <span class="sr-only">Close menu</span>
                 <svg
@@ -149,7 +160,6 @@
                     >Let's Connect</a
                   >
                 </div>
-
               </div>
             </div>
           </div>
@@ -157,9 +167,6 @@
       </header>
       <main class="snap-mandatory snap-y">
         <!-- Hero section -->
-
-
-
         <div class="relative snap-start">
           <!-- Background image and overlap -->
           <div
@@ -187,7 +194,7 @@
               aria-hidden="true"
               class="absolute inset-0 flex flex-col sm:hidden h-screen"
             >
-              <div class="relative w-full flex-1 bg-gray-800 ">
+              <div class="relative w-full flex-1 bg-gray-800">
                 <div class="absolute inset-0 overflow-hidden">
                   <img
                     src="./assets/images/hero-background.jpg"
@@ -197,18 +204,20 @@
                 </div>
                 <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
               </div>
-              <!-- <div class="h-48 w-full bg-white"></div> -->
+              <div class="h-48 w-full bg-white"></div>
             </div>
             <div class="relative py-32">
               <h1
                 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl"
               >
-              Commercial Custodial Services
+                Commercial Custodial Services
               </h1>
-              <h3 class="text-white">Experience the difference in commercial cleaning</h2>
+              <h3 class="text-white">
+                Experience the difference in commercial cleaning
+              </h3>
               <div class="mt-4 sm:mt-6">
                 <a
-                  href="#"
+                  href="./letsConnect.html"
                   class="inline-block rounded-md border border-transparent bg-green-500 px-8 py-3 font-medium text-white hover:bg-green-700"
                   >Get a free quote</a
                 >
@@ -218,7 +227,7 @@
 
           <section
             aria-labelledby="collection-heading"
-            class="relative -mt-96 sm:mt-0  snap-start sm:hidden"
+            class="relative -mt-96 sm:mt-0 snap-start sm:hidden"
           >
             <h2 id="collection-heading" class="sr-only">Collections</h2>
             <div
@@ -251,7 +260,7 @@
                         Why Commercial Custodial Services?
                       </p>
                       <h3 class="mt-1 font-semibold text-white">
-                        <a href="#">
+                        <a href="./about.html">
                           <span class="absolute inset-0"></span>
                           About Us
                         </a>
@@ -323,7 +332,7 @@
                         We care about our community.
                       </p>
                       <h3 class="mt-1 font-semibold text-white">
-                        <a href="#">
+                        <a href="./communityImpact.html">
                           <span class="absolute inset-0"></span>
                           Community Outreach
                         </a>
@@ -335,7 +344,6 @@
             </div>
           </section>
         </div>
-
 
         <section
           aria-labelledby="perks-heading"
@@ -442,64 +450,76 @@
 
       <footer aria-labelledby="footer-heading" class="bg-gray-900">
         <h2 id="footer-heading" class="sr-only">Footer</h2>
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="border-t border-gray-200 py-20">
+        <div class="mx-auto max-w-7xl px-2lg:px-6">
+          <div class="border-t border-gray-200 py-10">
             <div
               class="grid grid-cols-1 md:grid-flow-col md:auto-rows-min md:grid-cols-12 md:gap-x-8 md:gap-y-16"
             >
               <!-- Image section -->
-              <div
-                class="col-span-1 md:col-span-2 lg:col-start-1 lg:row-start-1"
-              >
+              <div class="col-span-1 lg:col-start-1 lg:row-start-1">
                 <img
-                src="./assets/images/ccsLogo.png"
-                  alt=""
-                  class="h-8 w-auto"
+                  src="./assets/images/ccsLogo.png"
+                  alt="CCS company logo"
+                  class="h-8 w-auto max-w-none"
                 />
               </div>
 
               <!-- Sitemap sections -->
               <div
-                class="col-span-6 mt-10 grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-8 md:col-start-3 md:row-start-1 md:mt-0 lg:col-span-6 lg:col-start-2"
+                class="col-span-6 mt-10 grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-10 md:row-start-1 md:mt-0 col-start-2"
               >
                 <div
-                  class="grid grid-cols-1 gap-y-12 sm:col-span-2 sm:grid-cols-2 sm:gap-x-8"
+                  class="grid grid-cols-2 gap-y-12 sm:col-span-2 sm:grid-cols-2 sm:gap-x-8"
                 >
-                  <div>
-                    <h3 class="text-sm font-medium text-gray-900">Products</h3>
+                  <div class="md:mt-5">
+                    <h3 class="text-sm font-medium text-gray-900">Pages</h3>
                     <ul role="list" class="mb-6 space-y-6">
                       <li class="text-sm">
-                        <a href="#" class="text-green-200 hover:text-green-600"
-                          >Home</a
-                        >
+                        <div class="flex w-fit">
+                          <img
+                            class="h-4 transition-opacity ease-in mr-2"
+                            src="./assets/images/ccsLogo.png"
+                            alt="CCS company logo"
+                          />
+                          <a
+                            href="#"
+                            class="text-green-200 hover:text-green-600"
+                            >Home</a
+                          >
+                        </div>
                       </li>
-                      <li class="text-sm">
-                        <a href="./about.html" class="text-green-500 hover:text-green-600"
+                      <li class="text-sm pl-8">
+                        <a
+                          href="./about.html"
+                          class="text-green-500 hover:text-green-600"
                           >About us</a
                         >
                       </li>
-                      <li class="text-sm">
-                        <a href="./communityImpact.html" class="text-green-500 hover:text-green-600"
+                      <li class="text-sm pl-8">
+                        <a
+                          href="./communityImpact.html"
+                          class="text-green-500 hover:text-green-600"
                           >Community Impact</a
                         >
                       </li>
-                      <li class="text-sm">
-                        <a href="./letsConnect.html" class="text-green-500 hover:text-green-600"
+                      <li class="text-sm pl-8">
+                        <a
+                          href="./letsConnect.html"
+                          class="text-green-500 hover:text-green-600"
                           >Let's Connect</a
                         >
                       </li>
                     </ul>
                   </div>
-
+                </div>
               </div>
-
-   
             </div>
           </div>
 
-          <div class="border-t border-green-900 py-10 text-center">
+          <div class="border-t border-green-900 py-8 text-center">
             <p class="text-sm text-green-600">
-              &copy; 2023 Commercial Custodial Services, LLC. All rights reserved.
+              &copy; 2023 Commercial Custodial Services, LLC. All rights
+              reserved.
             </p>
           </div>
         </div>
