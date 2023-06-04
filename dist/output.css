@@ -985,10 +985,6 @@ h5 {
   width: 100%;
 }
 
-.w-screen {
-  width: 100vw;
-}
-
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -1518,10 +1514,6 @@ h5 {
 
 .pt-36 {
   padding-top: 9rem;
-}
-
-.text-left {
-  text-align: left;
 }
 
 .text-center {
