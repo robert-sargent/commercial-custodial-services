@@ -12,21 +12,6 @@
     />
   </head>
   <body class="w-[100vw] h-[100vh]">
-    <!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
--->
     <div class="bg-white">
       <!--
     Mobile menu
@@ -168,7 +153,7 @@
 
       <!-- Header -->
 
-      <main class="isolate">
+      <main class="isolate" id="main">
         <!-- Hero section -->
         <div class="relative isolate -z-10">
           <svg
@@ -205,7 +190,7 @@
             aria-hidden="true"
           >
             <div
-              class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+              class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#80ffb5] to-[#18b583] opacity-30"
               style="
                 clip-path: polygon(
                   63.1% 29.5%,
@@ -377,7 +362,7 @@
           />
         </div>
         <!-- Logo cloud -->
-        <div class="relative isolate -z-10 mt-32 sm:mt-48">
+        <div class="relative isolate -z-10 mt-16 sm:mt-32">
           <div
             class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]"
           >
@@ -414,7 +399,7 @@
           </div>
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <h2
-              class="text-center text-lg font-semibold leading-8 text-gray-900"
+              class="text-center text-3xl font-semibold leading-8 text-gray-900"
             >
               Trusted by some of the largest employers in Arizona
             </h2>
@@ -592,6 +577,66 @@
                   Submit
                 </button>
               </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6"
+          id="cookiePopup"
+        >
+          <div
+            class="pointer-events-auto ml-auto max-w-xl rounded-xl bg-white p-6 shadow-lg ring-1 ring-gray-900/10"
+          >
+            <p class="text-sm leading-6 text-gray-900">
+              This website uses cookies to better understand our clients and
+              what they are interested in. Accepting our cookies is optional but
+              recommended, as they are delicious.
+            </p>
+            <div class="mt-4 flex items-center gap-x-5">
+              <button
+                onclick="setCookies(true)"
+                type="button"
+                class="rounded-md bg-green-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+              >
+                Accept all
+              </button>
+              <button
+                onclick="setCookies(false)"
+                type="button"
+                class="text-sm font-semibold leading-6 text-gray-900"
+              >
+                Reject all
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6"
+          id="cookiePopup"
+        >
+          <div
+            class="pointer-events-auto ml-auto max-w-xl rounded-xl bg-white p-6 shadow-lg ring-1 ring-gray-900/10"
+          >
+            <p class="text-sm leading-6 text-gray-900">
+              This website uses cookies to better understand our clients and
+              what they are interested in. Accepting our cookies is optional but
+              recommended, as they are delicious.
+            </p>
+            <div class="mt-4 flex items-center gap-x-5">
+              <button
+                onclick="setCookies(true)"
+                type="button"
+                class="rounded-md bg-green-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+              >
+                Accept all
+              </button>
+              <button
+                onclick="setCookies(false)"
+                type="button"
+                class="text-sm font-semibold leading-6 text-gray-900"
+              >
+                Reject all
+              </button>
             </div>
           </div>
         </div>

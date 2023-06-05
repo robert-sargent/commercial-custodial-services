@@ -27,6 +27,25 @@ function formatPhoneNumber(input) {
 
   input.value = formattedNumber;
 }
+let cookiesApproved = false;
+let cookiesDenied = false;
+
+const setCookies = (bool) => {
+  if (bool === true) {
+    document.getElementById("cookiePopup").style.visibility = "hidden";
+    return (cookiesApproved = true);
+  } else {
+    document.getElementById("cookiePopup").style.visibility = "hidden";
+    return (cookiesDenied = false);
+  }
+};
+window.onload = () => {
+  if (!cookiesApproved && !cookiesDenied) {
+    document.getElementById("cookiePopup").style.visibility = "visible";
+  } else {
+    document.getElementById("cookiePopup").style.visibility = "hidden";
+  }
+};
 
 const inputField = document.getElementById("phoneNumberInput");
 inputField.addEventListener("change", function (event) {
