@@ -5,8 +5,8 @@ let cookiesDenied = false;
 //////////////////////////////////////////////////
 //onload func that creates localStorage for cookies 
 window.onload = () => {
-  if(localStorage.getItem('ccs-phx-cookies')=== true){
-  document.getElementById("cookiePopup").style.visibility="visible"
+  if(!localStorage.getItem('ccs-phx-cookies') ){
+    document.getElementById("cookiePopup").style.visibility="visible"
   }else{
     document.getElementById("cookiePopup").style.visibility="hidden"
   }
