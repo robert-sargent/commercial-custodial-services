@@ -1,10 +1,51 @@
-let navMenu = document.getElementById("navMenu");
-
+//////////////////////////////////////////////////
+//init vars for cookie controller
+let cookiesApproved = false;
+let cookiesDenied = false;
+//////////////////////////////////////////////////
+//onload func that creates localStorage for cookies 
+window.onload = () => {
+  if(localStorage.getItem('ccs-phx-cookies')=== true){
+  document.getElementById("cookiePopup").style.visibility="visible"
+  }else{
+    document.getElementById("cookiePopup").style.visibility="hidden"
+  }
+}
+///////////////////////////////////////////////////
+//cookie controller
+const setCookies = (bool) => {
+  if(bool === true){
+      document.getElementById("cookiePopup").style.visibility="hidden"
+      localStorage.setItem('ccs-phx-cookies', true)
+      return cookiesApproved = true;
+  }else{
+      document.getElementById("cookiePopup").style.visibility="hidden"
+      localStorage.setItem('ccs-phx-cookies', false)
+      return cookiesDenied = false;
+  }
+}
+//////////////////////////////////////////////////
+//mobile nav toggle control
+let navMenu = document.getElementById("navMenu")
+let navBackground = document.getElementById("navBackground")
 const toggleNav = () => {
-  navMenu.hidden
-    ? navMenu.removeAttribute("hidden")
-    : (navMenu.hidden = "true");
-};
+  if(navMenu.hidden){
+    navBackground.classList.add('mobile-nav-in')
+    navMenu.removeAttribute("hidden")
+    setTimeout(()=> {
+      navBackground.classList.remove('mobile-nav-in')
+    }, 150)
+  }else{
+    navBackground.classList.add('mobile-nav-out')
+    setTimeout(() => {
+      navMenu.hidden="true"
+      navBackground.classList.remove('mobile-nav-out')
+    }, 150)
+    
+  }
+}
+//////////////////////////////////////////////////
+//phone number input formatter
 function formatPhoneNumber(input) {
   if (!input) {
     return; // Exit the function if the input is not defined
@@ -27,27 +68,9 @@ function formatPhoneNumber(input) {
 
   input.value = formattedNumber;
 }
-let cookiesApproved = false;
-let cookiesDenied = false;
-
-const setCookies = (bool) => {
-  if (bool === true) {
-    document.getElementById("cookiePopup").style.visibility = "hidden";
-    return (cookiesApproved = true);
-  } else {
-    document.getElementById("cookiePopup").style.visibility = "hidden";
-    return (cookiesDenied = false);
-  }
-};
-window.onload = () => {
-  if (!cookiesApproved && !cookiesDenied) {
-    document.getElementById("cookiePopup").style.visibility = "visible";
-  } else {
-    document.getElementById("cookiePopup").style.visibility = "hidden";
-  }
-};
 
 const inputField = document.getElementById("phoneNumberInput");
 inputField.addEventListener("change", function (event) {
   formatPhoneNumber(event.target);
 });
+//////////////////////////////////////////////////
