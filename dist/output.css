@@ -840,6 +840,14 @@ h5 {
   margin-right: 0.75rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -950,6 +958,11 @@ h5 {
 
 .h-\[50px\] {
   height: 50px;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .max-h-12 {
