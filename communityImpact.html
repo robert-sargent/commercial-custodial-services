@@ -12,21 +12,6 @@
     />
   </head>
   <body class="w-[100vw] h-[100vh]">
-    <!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
--->
     <div class="bg-white">
       <!--
     Mobile menu
@@ -168,7 +153,7 @@
 
       <!-- Header -->
 
-      <main class="isolate">
+      <main class="isolate" id="main">
         <!-- Hero section -->
         <div class="relative isolate -z-10">
           <svg
@@ -205,7 +190,7 @@
             aria-hidden="true"
           >
             <div
-              class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+              class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#80ffb5] to-[#18b583] opacity-30"
               style="
                 clip-path: polygon(
                   63.1% 29.5%,
@@ -247,10 +232,10 @@
                     At Commercial Custodial Services, giving back to the
                     community is a fundamental part of who we are. As a team, we
                     believe that we have a responsibility to use our resources
-                    and expertise to make a positive impact in the lives of
+                    and expertise to make a positive impact on the lives of
                     others. Our commitment to serving others is reflected in
                     programs such as Cleaning for Cancer and our support of
-                    local churches and non-profits. Whether it's cleaning homes
+                    local churches and nonprofits. Whether it's cleaning homes
                     for those battling cancer or organizing youth camping trips,
                     we take pride in our ability to make a difference in our
                     community.
@@ -343,8 +328,8 @@
                   We are committed to delivering reliable and cost-effective
                   solutions to our clients' unique needs while also making a
                   positive impact in the communities we serve. We believe in
-                  building lasting relationships with our clients and in
-                  fostering a culture of respect, accountability, and continuous
+                  building lasting relationships with our clients and fostering
+                  a culture of respect, accountability, and continuous
                   improvement among our team members. Our ultimate goal is to
                   help our clients achieve a clean, safe, and healthy
                   environment for their employees and customers.
@@ -362,7 +347,6 @@
                       400+
                     </dd>
                   </div>
-                
                 </dl>
               </div>
             </div>
@@ -377,78 +361,8 @@
             class="aspect-[5/2] w-full object-cover xl:rounded-3xl"
           />
         </div>
-
-        <!-- Values section -->
-        <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:mx-0">
-            <h2
-              class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-            >
-              Our values
-            </h2>
-            <p class="mt-6 text-lg leading-8 text-gray-600">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-              magnam voluptatum cupiditate veritatis in accusamus quisquam.
-            </p>
-          </div>
-          <dl
-            class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
-          >
-            <div>
-              <dt class="font-semibold text-gray-900">Be world-class</dt>
-              <dd class="mt-1 text-gray-600">
-                Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed
-                sint et magnam exercitationem quia. Ullam voluptas nihil vitae
-                dicta molestiae et. Aliquid velit porro vero.
-              </dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-gray-900">
-                Share everything you know
-              </dt>
-              <dd class="mt-1 text-gray-600">
-                Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime
-                adipisci illo id molestiae. Cumque cum ut minus rerum architecto
-                magnam consequatur. Quia quaerat minima.
-              </dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-gray-900">Always learning</dt>
-              <dd class="mt-1 text-gray-600">
-                Aut repellendus et officiis dolor possimus. Deserunt velit quasi
-                sunt fuga error labore quia ipsum. Commodi autem voluptatem nam.
-                Quos voluptatem totam.
-              </dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-gray-900">Be supportive</dt>
-              <dd class="mt-1 text-gray-600">
-                Magnam provident veritatis odit. Vitae eligendi repellat non.
-                Eum fugit impedit veritatis ducimus. Non qui aspernatur
-                laudantium modi. Praesentium rerum error deserunt harum.
-              </dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-gray-900">Take responsibility</dt>
-              <dd class="mt-1 text-gray-600">
-                Sit minus expedita quam in ullam molestiae dignissimos in harum.
-                Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus
-                laboriosam voluptas perspiciatis error.
-              </dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-gray-900">Enjoy downtime</dt>
-              <dd class="mt-1 text-gray-600">
-                Ipsa in earum deserunt aut. Quos minus aut animi et soluta.
-                Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur
-                ut est velit consequatur distinctio.
-              </dd>
-            </div>
-          </dl>
-        </div>
-
         <!-- Logo cloud -->
-        <div class="relative isolate -z-10 mt-32 sm:mt-48">
+        <div class="relative isolate -z-10 mt-16 sm:mt-32">
           <div
             class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]"
           >
@@ -485,7 +399,7 @@
           </div>
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <h2
-              class="text-center text-lg font-semibold leading-8 text-gray-900"
+              class="text-center text-3xl font-semibold leading-8 text-gray-900"
             >
               Trusted by some of the largest employers in Arizona
             </h2>
@@ -495,35 +409,35 @@
               <img
                 class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                 src="./assets/logos/adot.png"
-                alt="Transistor"
+                alt="azdot"
                 width="158"
                 height="48"
               />
               <img
                 class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                 src="./assets/logos/avondale.jpeg"
-                alt="Reform"
+                alt="City of Avondale"
                 width="158"
                 height="48"
               />
               <img
                 class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                 src="./assets/logos/CBP-logo-blue-lettering.png"
-                alt="Tuple"
+                alt="US customs and border patrol"
                 width="158"
                 height="48"
               />
               <img
                 class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
                 src="./assets/logos/logo-with-text-vertical.svg"
-                alt="SavvyCal"
+                alt="Waymo"
                 width="158"
                 height="48"
               />
               <img
                 class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
                 src="./assets/logos/phx-alt.png"
-                alt="Statamic"
+                alt="City of Phoenix"
                 width="158"
                 height="48"
               />
@@ -539,7 +453,6 @@
             >
               Our team
             </h2>
-           
           </div>
           <ul
             role="list"
@@ -556,7 +469,9 @@
               >
                 Travis Kozai
               </h3>
-              <p class="text-sm leading-6 text-gray-600">Cheif Executive Officer</p>
+              <p class="text-sm leading-6 text-gray-600">
+                Cheif Executive Officer
+              </p>
             </li>
             <li>
               <img
@@ -569,7 +484,9 @@
               >
                 John Lazzaro
               </h3>
-              <p class="text-sm leading-6 text-gray-600">Cheif Operations Officer</p>
+              <p class="text-sm leading-6 text-gray-600">
+                Cheif Operations Officer
+              </p>
             </li>
             <li>
               <img
@@ -582,7 +499,9 @@
               >
                 Laurie McGaughey
               </h3>
-              <p class="text-sm leading-6 text-gray-600">Cheif Financial Officer</p>
+              <p class="text-sm leading-6 text-gray-600">
+                Cheif Financial Officer
+              </p>
             </li>
 
             <!-- More people... -->
@@ -592,18 +511,24 @@
         <!-- Now Hiring!!! -->
         <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
           <div
-            class="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row"
+            class="mx-auto flex max-w-lg gap-12 flex-col items-center justify-between lg:mx-0 lg:max-w-none lg:flex-row"
           >
             <div class="w-full lg:max-w-lg lg:flex-auto">
               <h2
                 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
               >
-                We’re always looking for awesome people to join us
+                We’re always looking for awesome people to join our team!
               </h2>
               <p class="mt-6 text-xl leading-8 text-gray-600">
-                Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est
-                euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus
-                sit eu in id.
+                Join us at Commercial Custodial Services and make a difference
+                in Phoenix, Arizona! We are a provider deeply rooted in our love
+                for the city and state we call home. By joining our team, you'll
+                become part of a company that is passionate about showcasing the
+                best of Phoenix and the rest of the valley, embracing Arizona's
+                cultural heritage, and fostering a sense of unity. Together,
+                let's build a stronger community and create a brighter future
+                for Phoenix. Apply now to be part of our mission to serve and
+                care for our beloved city and state.
               </p>
               <img
                 src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1344&h=1104&q=80"
@@ -611,11 +536,108 @@
                 class="mt-16 mb-16 aspect-[6/5] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]"
               />
             </div>
-          
+            <div class="flex-1 mt-4 mb-3 sm:max-w-lg lg:max-w-md w-full">
+              <form class="space-y-5">
+                <div>
+                  <label class="font-medium"> Full name </label>
+                  <input
+                    type="text"
+                    required
+                    class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                  />
+                </div>
+                <div>
+                  <label class="font-medium"> Email </label>
+                  <input
+                    type="email"
+                    required
+                    class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                  />
+                </div>
+                <div>
+                  <label class="font-medium"> Phone </label>
+                  <input
+                    type="tel"
+                    id="phoneNumberInput"
+                    placeholder="(123)456-7890"
+                    required
+                    class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                  />
+                </div>
+                <div>
+                  <label class="font-medium"> Message </label>
+                  <textarea
+                    required
+                    class="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                  ></textarea>
+                </div>
+                <button
+                  class="w-full px-4 py-2 text-black font-medium bg-green-500 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-
-      
+        <div
+          class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6"
+          id="cookiePopup"
+        >
+          <div
+            class="pointer-events-auto ml-auto max-w-xl rounded-xl bg-white p-6 shadow-lg ring-1 ring-gray-900/10"
+          >
+            <p class="text-sm leading-6 text-gray-900">
+              This website uses cookies to better understand our clients and
+              what they are interested in. Accepting our cookies is optional but
+              recommended, as they are delicious.
+            </p>
+            <div class="mt-4 flex items-center gap-x-5">
+              <button
+                onclick="setCookies(true)"
+                type="button"
+                class="rounded-md bg-green-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+              >
+                Accept all
+              </button>
+              <button
+                onclick="setCookies(false)"
+                type="button"
+                class="text-sm font-semibold leading-6 text-gray-900"
+              >
+                Reject all
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6"
+          id="cookiePopup"
+        >
+          <div
+            class="pointer-events-auto ml-auto max-w-xl rounded-xl bg-white p-6 shadow-lg ring-1 ring-gray-900/10"
+          >
+            <p class="text-sm leading-6 text-gray-900">
+              This website uses cookies to better understand our clients and
+              what they are interested in. Accepting our cookies is optional but
+              recommended, as they are delicious.
+            </p>
+            <div class="mt-4 flex items-center gap-x-5">
+              <button
+                onclick="setCookies(true)"
+                type="button"
+                class="rounded-md bg-green-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+              >
+                Accept all
+              </button>
+              <button
+                onclick="setCookies(false)"
+                type="button"
+                class="text-sm font-semibold leading-6 text-gray-900"
+              >
+                Reject all
+              </button>
+            </div>
           </div>
         </div>
       </main>
@@ -628,8 +650,6 @@
             <div
               class="grid grid-cols-1 md:grid-flow-col md:auto-rows-min md:grid-cols-12 md:gap-x-8 md:gap-y-16"
             >
-       
-
               <!-- Sitemap sections -->
               <div
                 class="col-span-6 mt-10 grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-10 md:row-start-1 md:mt-0 col-start-2"
