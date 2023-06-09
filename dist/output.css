@@ -772,6 +772,16 @@ h5 {
   margin-right: 1.5rem;
 }
 
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.-mx-16 {
+  margin-left: -4rem;
+  margin-right: -4rem;
+}
+
 .-ml-24 {
   margin-left: -6rem;
 }
@@ -1117,6 +1127,10 @@ h5 {
   width: 100%;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -1179,6 +1193,10 @@ h5 {
 
 .rotate-\[30deg\] {
   --tw-rotate: 30deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1658,6 +1676,24 @@ h5 {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-\[\#19a809\] {
+  --tw-gradient-from: #19a809 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(25 168 9 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#37f322\] {
+  --tw-gradient-from: #37f322 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(55 243 34 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#6bf35c\] {
+  --tw-gradient-from: #6bf35c var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(107 243 92 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-\[\#086a37\] {
   --tw-gradient-to: #086a37 var(--tw-gradient-to-position);
 }
@@ -1833,6 +1869,11 @@ h5 {
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .pb-16 {
@@ -2079,6 +2120,10 @@ h5 {
 
 .opacity-70 {
   opacity: 0.7;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow-2xl {
@@ -2657,6 +2702,22 @@ h5 {
     height: 14rem;
   }
 
+  .md\:w-\[1115\] {
+    width: 1115;
+  }
+
+  .md\:w-\[1115px\] {
+    width: 1115px;
+  }
+
+  .md\:w-\[1515\] {
+    width: 1515;
+  }
+
+  .md\:w-\[20000\] {
+    width: 20000;
+  }
+
   .md\:grid-flow-col {
     grid-auto-flow: column;
   }
@@ -2835,6 +2896,19 @@ h5 {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-96 {
+    width: 24rem;
+  }
+
+  .lg\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .lg\:w-\[20000\] {
+    width: 20000;
   }
 
   .lg\:min-w-full {
