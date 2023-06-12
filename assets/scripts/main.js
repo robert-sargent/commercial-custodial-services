@@ -69,18 +69,20 @@ function formatPhoneNumber(input) {
 }
 
 const inputField = document.getElementById("phoneNumberInput");
-inputField.addEventListener("change", function (event) {
-  formatPhoneNumber(event.target);
-});
+inputField != null
+  ? inputField.addEventListener("change", function (event) {
+      formatPhoneNumber(event.target);
+    })
+  : null;
 //////////////////////////////////////////////////
 
+const path = document.getElementById("fill-path");
 function animateSVG() {
-  const path = document.getElementById("fill-path");
   const pathLength = path.getTotalLength();
   console.log("pathlength: ", pathLength);
 
   // Animation duration in milliseconds
-  const duration = 3000; // Adjust as needed
+  const duration = 2000; // Adjust as needed
 
   // Set initial styles
   path.style.strokeDasharray = pathLength;
@@ -105,4 +107,4 @@ function animateSVG() {
 }
 
 // Start the animation
-animateSVG();
+path != null ? animateSVG() : null;
