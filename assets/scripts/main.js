@@ -67,7 +67,6 @@ function formatPhoneNumber(input) {
 
   input.value = formattedNumber;
 }
-
 const inputField = document.getElementById("phoneNumberInput");
 inputField != null
   ? inputField.addEventListener("change", function (event) {
@@ -75,36 +74,36 @@ inputField != null
     })
   : null;
 //////////////////////////////////////////////////
-
+// SVG Animation functions
 const path = document.getElementById("fill-path");
-function animateSVG() {
-  const pathLength = path.getTotalLength();
-  console.log("pathlength: ", pathLength);
+const pathLength = path.getTotalLength();
+path.style.strokeDasharray = pathLength;
+path.style.strokeDashoffset = pathLength;
 
-  // Animation duration in milliseconds
-  const duration = 2000; // Adjust as needed
-
-  // Set initial styles
-  path.style.strokeDasharray = pathLength;
+const animatePath = () => {
+  path.style.transition = "none";
   path.style.strokeDashoffset = pathLength;
-  path.style.opacity = "1";
-
-  // Animate the filling in from left to right
-  path.style.animation = `fillAnimation ${duration}ms linear forwards`;
-
-  // Delay the fade-out animation
-  setTimeout(() => {
-    path.style.animation = `fadeAnimation 1000ms forwards`;
-  }, duration);
-
-  // Reset the animation after fade-out
-  setTimeout(() => {
-    path.style.animation = "none";
-    path.style.strokeDashoffset = pathLength;
-    path.style.opacity = "0";
-    animateSVG();
-  }, duration + 1000);
-}
-
+  path.style.fill = "none";
+  // Trigger reflow to restart the animation
+  path.getBoundingClientRect();
+  path.style.transition = `stroke-dashoffset 2s linear, fill 1s linear 2s`;
+  path.style.strokeDashoffset = "0";
+};
+const resetPath = () => {
+  path.style.transition = "none";
+  path.style.strokeDashoffset = pathLength;
+  path.style.fill = "none";
+};
+const restartAnimation = () => {
+  resetPath();
+  animatePath();
+};
+animatePath();
+path.addEventListener("transitionend", (event) => {
+  if (event.propertyName === "stroke-dashoffset") {
+    setTimeout(restartAnimation, 1000);
+  }
+});
 // Start the animation
 path != null ? animateSVG() : null;
+/////////////////////////////////////////////////
