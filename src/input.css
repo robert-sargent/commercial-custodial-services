@@ -97,6 +97,24 @@
     width: 0;
   }
 }
+@keyframes fillAnimation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -2000;
+  }
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .mobile-nav-out {
   animation-name: mobile-nav-out;
   animation-duration: 150ms;
