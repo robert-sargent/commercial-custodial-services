@@ -25,6 +25,19 @@ const setCookies = (bool) => {
   }
 };
 //////////////////////////////////////////////////
+
+// Google analytics tag 
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+if(cookiesApproved){
+  gtag("js", new Date());
+  gtag("config", "G-B1HXBE2XVY");
+}
+
+
+//////////////////////////////////////////////////////////////
 //mobile nav toggle control
 let navMenu = document.getElementById("navMenu");
 let navBackground = document.getElementById("navBackground");
