@@ -32,6 +32,7 @@ function gtag() {
   dataLayer.push(arguments);
 }
 if(cookiesApproved){
+  console.log('cookies')
   gtag("js", new Date());
   gtag("config", "G-B1HXBE2XVY");
 }
